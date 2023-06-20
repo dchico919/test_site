@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block this %}
+    <a href="/login" class="button">Login</a>
+{% endblock %}
+
+{% block guest %}
+  <h1 class="quote-title">Guest Quote</h1>
+{% endblock %}
+
+{% block quoter %}
+  <div class="quote-details">
+    <p class="quote-item"><strong>Email:</strong> {{ guest_email }}</p>
+    <p class="quote-item"><strong>Miles:</strong> {{ miles }} mi.</p>
+    <p class="quote-item"><strong>Truck:</strong> {{ truck }}</p>
+    <p class="quote-item"><strong>Price per Mile:</strong> ${{ price_per_mile }}</p>
+    <p class="quote-item"><strong>Weight:</strong> {{ weight }} lb(s)</p>
+    <p class="quote-item"><strong>Price per Pound:</strong> ${{ price_per_pound }}</p>
+  </div>
+  <div>
+    <p class="quote-total"><strong>Total Price:</strong> ${{ total_price }}</p>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div>
+    <a href="/register" class="button">Register</a>
+  </div>
+{% endblock %}
